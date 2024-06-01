@@ -1,5 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 *{
     padding:0;
     margin:0;
     box-sizing:border-box;
+}
+
+.navbar{
+    background: #662671;
+}
+.logo{
+    width:296px;
+    height:46px;
+}
+.userimg{
+    width:45px;
+    height:45px;
+    color:white;
+    top:30px;
 }

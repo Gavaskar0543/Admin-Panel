@@ -1,6 +1,9 @@
+import Navbar from '../Components/Dashboard/Navbar';
 const HomePage = () =>{
     return(
-        <div>Home is Here</div>
+       <>
+       <Navbar/>
+       </>
     )
 }
 
