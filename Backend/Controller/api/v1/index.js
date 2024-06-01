@@ -1,5 +1,7 @@
 const Admin = require('../../../Model/Admin_Model');
 const Employee = require('../../../Model/Employee_Model');
+const mailer  = require('../../../Mailer/notify');
+const jwt = require('jsonwebtoken')
 module.exports.createSession = async function(req,res){
     try{
        let user = await Employee.findOne({email:req.body.email});
