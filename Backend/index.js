@@ -2,6 +2,7 @@ const express = require('express');
 require('dotenv').config();
 const port = process.env.PORT;
 const app  = express();
+const db = require('./Config/mongoose');
 const monitor = require('./Config/Monitor');
 const logger = require('morgan');
 

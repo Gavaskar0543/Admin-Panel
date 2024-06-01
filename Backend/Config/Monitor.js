@@ -3,7 +3,7 @@ const fs = require('fs');
 const rst = require('rotating-file-stream');
 
 // Ensure log directory exists (handle potential errors)
-const logDir = path.join(__dirname, 'logs');
+const logDir = path.join(__dirname, '../logs');
 try {
   if (!fs.existsSync(logDir)) {
     fs.mkdirSync(logDir);
