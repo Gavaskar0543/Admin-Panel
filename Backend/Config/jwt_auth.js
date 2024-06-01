@@ -2,7 +2,7 @@ const passport = require('passport');
 const JWTStrategy = require('passport-jwt').Strategy;
 const ExtractJWT = require('passport-jwt').ExtractJwt;
 
-const User = require('../Model/UserModel');
+const Admin = require('../Model/Admin_Model')
 
 
 let opts = {
@@ -13,7 +13,7 @@ let opts = {
 
 passport.use(new JWTStrategy(opts, async function(jwtPayLoad, done){
 
-   let user = await User.findById(jwtPayLoad._id);
+   let user = await Admin.findById(jwtPayLoad._id);
    if(!user){
     return done(null,false);
    }       
