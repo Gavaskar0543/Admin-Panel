@@ -164,6 +164,23 @@ module.exports.updateUser = async (req,res)=>{
     }
 }
 
+module.exports.getAllEmployee = async (req,res)=>{
+    try{
+    let user = Employee.find();
+    return res.status(200).json({
+        message:"User Fetched",
+        success:true,
+        data:user
+    })
+    }
+    catch(error){
+        return res.status(500).json({
+            message:error.message,
+            success:false
+        })
+    }
+}
+
 /**search Employee */
 module.exports.searchEmployee = async (req, res) => {
     const { query } = req.query; // Get the search term
