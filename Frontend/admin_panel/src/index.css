@@ -78,3 +78,21 @@ tbody tr{
     color:#767676;
     border:1px solid #767676;
 }
+.auth-container{
+    width:100vw;
+    height:100vh;
+    background: 
+    linear-gradient(rgba(92, 33, 139, 0.2),rgba(92, 33, 139, 0.2)), /* Overlay color with transparency */
+    url('/assets/authBackground.png'); /* Background image */
+  background-position: center;
+  background-repeat: no-repeat;
+    
+}
+
+.auth-form{
+    width: 45vw;
+    height:63vh;
+    position:relative;
+    top:21%;
+    left:100px;
+}
