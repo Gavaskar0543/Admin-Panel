@@ -36,3 +36,15 @@ background:#f4f4f4;
     background:#f4f4f4;
 }
 
+.addColor{
+    background:#662671;
+}
+
+.search-box{
+ border:1px solid #9D9D9D;
+ width:534px;
+ height:33px;
+}
+.search-box:focus{
+    outline:none;
+}

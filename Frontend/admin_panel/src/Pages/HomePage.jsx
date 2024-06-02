@@ -1,5 +1,7 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet,Route,Routes } from 'react-router-dom';
 import Home from '../Components/Dashboard/Home'
+import Roles from '../Components/Dashboard/Roles';
+import User from '../Components/Dashboard/User'
 import Navbar from '../Components/Dashboard/Navbar';
 import SideBar from '../Components/Dashboard/SideBar';
 const HomePage = () =>{
@@ -9,7 +11,14 @@ const HomePage = () =>{
        <div className='flex'>
        <SideBar/>
        <div className='px-3'>
-        <Home/>
+       <div className='px-3'>
+          <Routes>
+            <Route path="/" element={<Roles />} />
+            <Route path="/roles" element={<Roles />} />
+            <Route path='/user'  element={<User/>} />
+          </Routes>
+          <Outlet />
+        </div>
        </div>
        </div>
        </>
