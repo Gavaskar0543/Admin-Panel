@@ -1,17 +1,20 @@
 import { GoArrowLeft } from "react-icons/go";
 
-const AddRole = ()=>{
+const EditRole = ()=>{
     return(
         <div className="main-container">
-            <div className="flex items-center py-2">
-            <div>
-                <GoArrowLeft />
+            <div className="flex items-center py-4 ml-3">
+            <div className="">
+                <GoArrowLeft className="text-lg font-normal" />
             </div>
             <div>
                 <p className=" font-semibold px-4">Add Role</p>
             </div>
-        </div><div>
-                <legend>Role</legend>
+        </div>
+        <div className="ml-4 px-4 w-64">
+        
+       <label for="role-name" className=" ">Role Name</label>
+       <input id="role-name" type="text" className="w-64 focus:outline-none" />
 
             </div>
             <div  className="flex confirm-btn  w-1/3 items-center justify-around">
@@ -23,4 +26,4 @@ const AddRole = ()=>{
     )
 }
 
-export default AddRole;
+export default EditRole;
