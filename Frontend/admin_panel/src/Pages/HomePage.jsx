@@ -11,8 +11,8 @@ const HomePage = () =>{
        <Navbar/>
        <div className='flex'>
        <SideBar/>
-       <div className='px-3'>
-       <div className='px-3'>
+       <div className='px-2'>
+       <div className=''>
           <Routes>
             <Route path="/" element={<AddRole />} />
             <Route path="/roles" element={<Roles />} />

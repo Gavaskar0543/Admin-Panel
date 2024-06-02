@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { IoMdArrowDropright } from "react-icons/io";
 
 const SideBar = () => {
   const navigationItems = [
@@ -17,7 +18,7 @@ const SideBar = () => {
                 <img src={item.icon} width={25} alt="icon" />
                 <p className="px-3 font-semibold">{item.name}</p>
               </div>
-              <p>X</p>
+              <IoMdArrowDropright className="text-2xl font-bold"/>
             </Link>
           ))}
         </ul>

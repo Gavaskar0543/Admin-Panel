@@ -1,4 +1,5 @@
 import Table from "./Table"
+import { IoIosSearch } from "react-icons/io";
 
 const User = ()=>{
     return(
@@ -10,7 +11,13 @@ const User = ()=>{
                 <p className="font-semibold px-2 rounded-lg">User</p>
                 </div>
                 <div className="ml-3">
-                    <input type="text" className="search-box px-4" placeholder=""/>
+                <label class="relative block">
+  <span class="sr-only">Search</span>
+  <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+    <IoIosSearch/>
+  </span>
+  <input class="search-box placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none  sm:text-sm" placeholder="" type="text" name="search"/>
+</label>
                 </div>
             </div>
             <div>
