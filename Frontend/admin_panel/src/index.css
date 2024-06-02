@@ -12,14 +12,14 @@
 }
 
 .side-bar{
-width:25vw;
+width:20vw;
 height:92vh;
 background:#f4f4f4;
 }
 
 .give-margin-20{
     position:relative;
-    top:10%;
+    top:3%;
 }
 
 .nav-list:hover{
