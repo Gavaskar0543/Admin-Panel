@@ -4,6 +4,7 @@ import Roles from '../Components/Dashboard/Roles';
 import User from '../Components/Dashboard/User'
 import Navbar from '../Components/Dashboard/Navbar';
 import SideBar from '../Components/Dashboard/SideBar';
+import AddRole from '../Components/Dashboard/AddRole';
 const HomePage = () =>{
     return(
        <>
@@ -13,7 +14,7 @@ const HomePage = () =>{
        <div className='px-3'>
        <div className='px-3'>
           <Routes>
-            <Route path="/" element={<Roles />} />
+            <Route path="/" element={<AddRole />} />
             <Route path="/roles" element={<Roles />} />
             <Route path='/user'  element={<User/>} />
           </Routes>

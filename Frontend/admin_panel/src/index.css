@@ -48,3 +48,33 @@ background:#f4f4f4;
 .search-box:focus{
     outline:none;
 }
+
+table{
+    width:100%;
+    margin-top:32px;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    text-align:center;
+  
+}
+thead th{
+    padding:6px 0 6px 0px;
+    background:#F4EDAF;
+    font-weight:600;
+}
+
+tbody tr{
+    text-align:center;
+    margin:10px;
+}
+
+.confirm-btn{
+    position:relative;
+    top:75%;
+    float:right;
+}
+
+.cancelColor{
+    color:#767676;
+    border:1px solid #767676;
+}
