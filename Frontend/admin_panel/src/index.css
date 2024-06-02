@@ -10,13 +10,23 @@
 .navbar{
     background: #662671;
 }
-.logo{
-    width:296px;
-    height:46px;
+
+.side-bar{
+width:25vw;
+height:92vh;
+background:#f4f4f4;
 }
-.userimg{
-    width:45px;
-    height:45px;
-    color:white;
-    top:30px;
+
+.give-margin-20{
+    position:relative;
+    top:10%;
 }
+
+.nav-list:hover{
+    background:#F4EDAF;
+}
+.nav-list:active{
+    background:F4EDAF;
+}
+
+
