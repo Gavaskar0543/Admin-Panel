@@ -101,3 +101,12 @@ tbody tr{
 .auth-form p{
     letter-spacing: .5px;
 }
+
+.forgot-password{
+    color:#662671;
+    font-size:12px;
+    margin-top: -10px;
+    margin-bottom:20px;
+    letter-spacing: 0px !important;
+    cursor: pointer;
+}
