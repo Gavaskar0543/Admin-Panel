@@ -90,9 +90,14 @@ tbody tr{
 }
 
 .auth-form{
-    width: 45vw;
+    width: 30vw;
     height:63vh;
     position:relative;
     top:21%;
-    left:100px;
+    left:280px;
+    
+  
+}
+.auth-form p{
+    letter-spacing: .5px;
 }
