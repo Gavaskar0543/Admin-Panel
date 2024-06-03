@@ -110,3 +110,7 @@ tbody tr{
     letter-spacing: 0px !important;
     cursor: pointer;
 }
+
+.textColor{
+    color:#662671;
+}

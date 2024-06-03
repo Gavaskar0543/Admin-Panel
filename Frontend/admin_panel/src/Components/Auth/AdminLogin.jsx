@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 const AdminLogin =() =>{
     return(
      <div className="auth-container ">
@@ -23,7 +24,7 @@ const AdminLogin =() =>{
 
                     </div>
                     <div>
-                        <p className="text-sm forgot-password text-end font-semibold">Forgot Password?</p>
+                    <Link to="/admin/forgot-password">    <p className="text-sm forgot-password text-end font-semibold">Forgot Password?</p></Link>
                     </div>
 
                 </div>
