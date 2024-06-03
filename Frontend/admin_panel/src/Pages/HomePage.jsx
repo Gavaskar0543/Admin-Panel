@@ -13,13 +13,10 @@ const HomePage = () =>{
        <SideBar/>
        <div className='px-2'>
        <div className=''>
-          <Routes>
-            <Route path="/" element={<AddRole />} />
-            <Route path="/roles" element={<Roles />} />
-            <Route path='/user'  element={<User/>} />
-          </Routes>
-          <Outlet />
+        <Outlet/>
+          
         </div>
+      
        </div>
        </div>
        </>
