@@ -31,7 +31,7 @@ const AddUser = ()=>{
        <div className="mt-3 w-full flex justify-between items-center">
       {/*role */}
       <div>
-        <label for="role" className=" ">Role</label><br/>
+        <label for="role" className="">Role</label><br/>
         <select id="role" className="w-64 focus:outline-none">
             <option value="admin">Admin</option>
             <option value="superadmin">superadmin</option>
@@ -40,9 +40,12 @@ const AddUser = ()=>{
         </select>
       </div>
       {/*image upload */}
-      <div>
+      <div  className="flex justify-between items-center">
+
+
+
         <div>
-            <img src="#" width={100} alt="userImg"/>
+            <img src="/assets/imgupload.png" width={50} alt="userImg"/>
         </div>
         <div>
             <input type="file" placeholder="upload here"/>
