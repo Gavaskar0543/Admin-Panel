@@ -1,8 +1,9 @@
 import { useTable, useSortBy } from 'react-table';
+import { useState } from 'react';
 import { TiArrowUnsorted } from "react-icons/ti";
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
-
+import Alert from './Alert';
 const data = [
     { col1: '123', col2: 'admin',col3:'active', },
     { col1: '113', col2: 'emp',col3:'active', },
@@ -26,6 +27,13 @@ const data = [
     }
   ];
 function Table() {
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const isOpen = () =>{
+      setIsOpen(true);
+  }
+  const closeModal = ()=>{
+      setIsOpen(false)
+  } 
   const {
     getTableProps,
     getTableBodyProps,
@@ -34,7 +42,11 @@ function Table() {
     prepareRow,
   } = useTable({ columns, data }, useSortBy);
 
+
   return (
+    <>
+    {isOpen ?   <Alert modalIsOpen={modalIsOpen} closeModal={closeModal} message={'Are you sure you want to delete this role?'} text={'Delete'}/>
+: ''  }
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
@@ -63,13 +75,13 @@ function Table() {
                  ))}
                 <td className='w-full flex justify-center items-center'>
                     <FiEdit className='cursor-pointer'/>
-                    <RiDeleteBin6Line className='ml-2 cursor-pointer' />
+                    <RiDeleteBin6Line className='ml-2 cursor-pointer' onClick={ isOpen} />
                 </td>
               </tr></>
           );
         })}
       </tbody>
-    </table>
+    </table></>
   );
 }
 export default Table;

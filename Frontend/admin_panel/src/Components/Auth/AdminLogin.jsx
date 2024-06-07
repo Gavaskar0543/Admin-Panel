@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 const AdminLogin =() =>{
     return(
+    
      <div className="auth-container ">
         <div className="bg-white border auth-form rounded-lg">
             <form>

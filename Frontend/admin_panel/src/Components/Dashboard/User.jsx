@@ -1,8 +1,10 @@
 import Table from "./Table"
+import { Link, Outlet } from 'react-router-dom'
 import { IoIosSearch } from "react-icons/io";
 
 const User = ()=>{
     return(
+    <>  {<Outlet/>}
         <div className="main-container px-2  border rounded-lg flex flex-col  items-start">
         <div className="w-full flex justify-between items-center mt-3">
             <div className="flex">
@@ -21,11 +23,12 @@ const User = ()=>{
                 </div>
             </div>
             <div>
-                <button className="rounded-lg px-4  text-sm py-2 font-semibold text-white addColor">Add New</button>
-            </div>
+             <Link to="/user/add">  <button className="rounded-lg px-4  text-sm py-2 font-semibold text-white addColor">Add New</button>
+         </Link>   
+         </div>
         </div>
         <Table/>
-        </div>
+        </div></>
     )
     }
 export default User

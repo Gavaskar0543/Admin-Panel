@@ -7,6 +7,8 @@ import ForgotPassword from './Components/Auth/ForgotPassword';
 import Roles from './Components/Dashboard/Roles';
 import User from './Components/Dashboard/User'
 import AddRole from './Components/Dashboard/AddRole';
+import AddUser from './Components/Dashboard/AddUser';
+import EditUser from './Components/Dashboard/EditUser';
 function App() {
   const router = createBrowserRouter([{
     path:'/',
@@ -25,7 +27,15 @@ function App() {
     },
     {
       path:"/user",
-      element:<User/>
+      element:<User/>,
+      children:[{
+        path:'/user/add',
+        element:<AddUser/>
+      },
+      {
+        path:'/user/edit',
+        element:<EditUser/>
+      }]
     }
   ]
     
