@@ -1,4 +1,5 @@
 import { GoArrowLeft } from "react-icons/go";
+import { TbPhotoUp } from "react-icons/tb";
 
 const AddUser = ()=>{
     return(
@@ -40,15 +41,27 @@ const AddUser = ()=>{
         </select>
       </div>
       {/*image upload */}
-      <div  className="flex justify-between items-center">
+      <div className="w-full  px-4"  >
+        <p>Upload image</p>
+       <div className="flex w-full justify-around py-3  items-center  border">
 
-
-
+      
         <div>
             <img src="/assets/imgupload.png" width={50} alt="userImg"/>
         </div>
         <div>
-            <input type="file" placeholder="upload here"/>
+        <div class="file-input-container">
+        <input type="file" id="file-input" class="file-input" />
+        <label for="file-input" class="">
+            <div class=" flex flex-col justify-center items-center">
+ <TbPhotoUp className="text-3xl text-center"/> 
+ <p className="text-sm font-bold upload-text">Upload Maximum allowed file size is 10MB</p>
+                
+            </div>
+           
+        </label>
+    </div>
+        </div>
         </div>
         </div>
       {/*status */}
