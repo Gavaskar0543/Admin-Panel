@@ -4,29 +4,8 @@ import { TiArrowUnsorted } from "react-icons/ti";
 import { FiEdit } from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import Alert from './Alert';
-const data = [
-    { col1: '123', col2: 'admin',col3:'active', },
-    { col1: '113', col2: 'emp',col3:'active', },
-    { col1: '103', col2: 'admin',col3:'active', },
-   
-  ];
-  
-  // Define columns
-  const columns = [
-    {
-      Header: 'id',
-      accessor: 'col1', // accessor is the "key" in the data
-    },
-    {
-      Header: 'Role Name',
-      accessor: 'col2',
-    },
-    {
-        Header:'Status',
-        accessor:'col3'
-    }
-  ];
-function Table() {
+
+function Table({columns, data}) {
   const [modalIsOpen, setIsOpen] = useState(false);
   const isOpen = () =>{
       setIsOpen(true);

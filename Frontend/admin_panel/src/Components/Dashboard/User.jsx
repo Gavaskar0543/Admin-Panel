@@ -3,6 +3,34 @@ import { Link, Outlet } from 'react-router-dom'
 import { IoIosSearch } from "react-icons/io";
 
 const User = ()=>{
+  const data = [
+    { col1: '123', col2:'Ajay',col3:'9360764252',col4: 'admin',col5:'active', },
+   
+   
+  ];
+  
+  // Define columns
+  const columns = [
+    {
+      Header: 'id',
+      accessor: 'col1', // accessor is the "key" in the data
+    },{
+      Header:'Name',
+      accessor:'col2'
+    },
+    {
+      Header:'Phone Number',
+      accessor:'col3'
+    },
+    {
+      Header: 'Role Name',
+      accessor: 'col4',
+    },
+    {
+        Header:'Status',
+        accessor:'col5'
+    }
+  ];
     return(
     <>  {<Outlet/>}
         <div className="main-container px-2  border rounded-lg flex flex-col  items-start">
@@ -27,7 +55,7 @@ const User = ()=>{
          </Link>   
          </div>
         </div>
-        <Table/>
+        <Table columns={columns} data={data}/>
         </div></>
     )
     }

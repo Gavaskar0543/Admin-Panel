@@ -5,6 +5,7 @@
     padding:0;
     margin:0;
     box-sizing:border-box;
+    overflow: hidden;
     
     
 }
@@ -12,7 +13,9 @@
 .navbar{
     background: #662671;
 }
-
+.nav-item.selected {
+    background-color: #F4EDAF;
+  }
 .side-bar{
 width:20vw;
 height:92vh;
@@ -27,13 +30,13 @@ background:#f4f4f4;
 .nav-list:hover{
     background:#F4EDAF;
 }
-.nav-list:active{
-    background:F4EDAF;
+.nav-list.selected{
+    background:#F4EDAF;
 }
 
 .main-container{
-    width:80vw;
-    height:90vh;
+    width:79vw;
+    height:92vh;
     
 }
 
