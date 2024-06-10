@@ -1,10 +1,29 @@
 import { Link } from "react-router-dom"
+import axios from 'axios'
+import { ROOT_URL } from "../../URLs"
 const AdminLogin =() =>{
+
+    const handleOnSubmit = async (e)=>{
+        e.preventDefault();
+        const url = `${ROOT_URL}/admin/create-session`;
+        const data = {
+            email:e.target.email.value,
+            password:e.target.password.value
+        }
+        try{
+         const response = await axios.post(url,data);
+         if(response.status === 200){
+            alert("Success")
+         }
+        }
+        catch(error){
+
+        }
+    }
     return(
-    
      <div className="auth-container ">
         <div className="bg-white border auth-form rounded-lg">
-            <form>
+            <form onSubmit={handleOnSubmit}>
                 <div className="w-full flex flex-col mt-4 justify-center items-center ">
                 <div className="mt-3 mb-4 flex flex-col mb-3">
                     <div className="w-full flex justify-center items-center">
