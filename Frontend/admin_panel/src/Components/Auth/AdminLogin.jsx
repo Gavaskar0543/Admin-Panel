@@ -15,9 +15,12 @@ const AdminLogin =() =>{
          if(response.status === 200){
             alert("Success")
          }
+         else{
+            alert(response.data.message);
+         }
         }
         catch(error){
-
+alert(error.message)
         }
     }
     return(

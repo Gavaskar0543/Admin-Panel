@@ -5,6 +5,7 @@ const app  = express();
 const db = require('./Config/mongoose');
 const monitor = require('./Config/Monitor');
 const logger = require('morgan');
+const cors = require('cors');
 
 //setup
 app.set('view engine','ejs');
@@ -14,7 +15,7 @@ app.set('views','./View')
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(logger(monitor.morgan.mode,monitor.morgan.options))
-
+app.use(cors())
 
 
 //router
@@ -25,5 +26,5 @@ app.listen(port, (err) => {
         console.log(`Error: ${err}`);
         return;
     }
-    console.log(`Listening on port ${port}`);
+    console.log(`http://localhost:${port}/`);
 })
