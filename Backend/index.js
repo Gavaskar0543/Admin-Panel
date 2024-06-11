@@ -15,6 +15,7 @@ app.set('views','./View')
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(logger(monitor.morgan.mode,monitor.morgan.options))
+//cors
 app.use(cors())
 
 
